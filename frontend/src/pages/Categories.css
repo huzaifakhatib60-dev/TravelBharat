@@ -1,0 +1,56 @@
+.categories-page{
+    padding:40px;
+    background:#f5f5f5;
+}
+
+.categories-page h1{
+     text-align:center;
+    margin-bottom:50px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.categorie{
+    margin-bottom:50px;
+}
+
+.categorie h2{
+     margin-bottom:20px;
+    color:rgb(9, 34, 9);
+    border-left:6px solid rgb(9, 34, 9);
+    padding-left:12px;
+}
+
+.categorie-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.categorie-card{
+     background:white;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.categorie-card:hover{
+    transform:translateY(-6px);
+}
+
+.categorie-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: #0b8f3b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.categorie-link:hover {
+    background: #087a32;
+}

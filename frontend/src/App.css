@@ -1,0 +1,1136 @@
+.navbar {
+ /* background-image: url(https://i.pinimg.com/1200x/aa/5d/92/aa5d9273ec5f92954c510d75f4f1b19f.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;*/
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+  box-shadow: 1px 1px 5px black;
+  display: flex;
+  justify-content: space-between; /* Logo left, menu right */
+  align-items: center;
+  padding: 20px 60px;
+  height: 20vh;
+}
+
+.search-bar {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  font-size: 16px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: orange;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 35px;
+  padding-right: 20px;
+}
+
+.nav-links li {
+  padding: 5px 7px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-links li:hover{
+  border: 4px solid rgb(247, 168, 21);
+  border-radius: 10px;
+}
+
+/*hero section*/
+
+.hero-section{
+  padding: 10px;
+  margin-top: 10px;
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url(./assets/hero-section\ bg.png);
+  height: 150vh;
+  background-size: cover;
+}
+
+.hero-head-div{
+  margin-top: 5px;
+}
+
+.hero-head{
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  font-style: oblique;
+  font-family: sans-serif;
+  margin-left: 30%;
+  margin-top: 10px;
+}
+
+.hero-purpose1{
+  height: 50vh;
+  width: 50%;
+}
+
+.hero-purpose-que1{
+  padding-top: 20px;
+  color:black;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.hero-purpose-que1:hover{
+  color:white;
+}
+
+.hero-purpose-ans1{
+  padding-top: 200px;
+  color:cornsilk;
+}
+
+.hero-purpose2{
+  height: 70vh;
+  width: 50%;
+  margin-top: 100px;
+  margin-left: 50%;
+}
+
+.hero-purpose-que2{
+  padding-top: 20px;
+  color:black;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.hero-purpose-que2:hover{
+  color:white;
+}
+
+.hero-purpose-ans2{
+  font-size: 22px;
+  color:cornsilk;
+  padding: 20px;
+}
+
+
+.hero-purpose-ans2 li{
+  padding: 20px;
+}
+
+/*featured states section*/
+
+.featured-states{
+  padding: 10px;
+  margin-top: 10px;
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url(./assets/featured-states\ bg.png);
+  height: 150vh;
+  background-size: cover;
+}
+
+.featured-states-head-text{
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  font-style: oblique;
+  font-family: sans-serif;
+  margin-left: 30%;
+  margin-top: 10px;
+}
+
+.slider-container{
+    position: relative;
+    margin-top: 100px;
+}
+
+.famous-states{
+    display:flex;
+    gap:50px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding:40px 70px;
+}
+
+.famous-states::-webkit-scrollbar{
+    display:none;
+}
+
+.slide-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  z-index: 10;
+}
+
+.left{
+  left: 10px;
+}
+
+.right{
+  right: 10px;
+}
+
+.slide-btn:hover{
+  background: orange;
+  color: white;
+}
+
+.maharashtra{
+  background-image: url(./assets/maharashtra.png);
+  background-size: cover;
+  border-radius: 25px;
+  margin:80px;
+  min-width: 350px;
+  height: 550px;
+  display: flex;
+  align-items:end;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.goa{
+  background-image: url(./assets/goa.png);
+  background-size: cover;
+  border-radius: 25px;
+  margin:80px;
+  min-width: 350px;
+  height: 550px;
+  display: flex;
+  align-items:end;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.rajasthan{
+  background-image: url(./assets/rajasthan.png);
+  background-size: cover;
+  border-radius: 25px;
+  margin:80px;
+  display: flex;
+  min-width: 350px;
+  height: 550px;
+  align-items:end;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.uttar-pradesh{
+  background-image: url(./assets/uttar-pradesh.png);
+  background-size: cover;
+  border-radius: 25px;
+  margin:80px;
+  display: flex;
+  min-width: 350px;
+  height: 550px;
+  align-items:end;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.kerala{
+  background-image: url(./assets/kerala.png);
+  background-size: cover;
+  border-radius: 25px;
+  margin:80px;
+  display: flex;
+  min-width: 350px;
+  height: 550px;
+  align-items:end;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.maharashtra p, .goa p, .rajasthan p, .uttar-pradesh p, .kerala p {
+  margin-bottom: 10px;
+}
+
+.maharashtra:hover, .goa:hover, .rajasthan:hover, .uttar-pradesh:hover, .kerala:hover {
+  transform: scale(1.10);
+  transition: transform 0.3s ease;
+}
+
+/*categories preview section*/
+
+.categories-preview{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 330vh;
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+}
+
+.heritage-sites{
+  width: 100%;
+  min-height: 65vh;
+  padding-bottom: 40px;
+}
+
+.heritage-sites h1{
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: oblique;
+  font-family: sans-serif;
+}
+
+.heritage-sites-container{
+  display: flex;
+  gap: 55px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 30px 70px;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.heritage-sites-container::-webkit-scrollbar{
+  display: none;
+}
+
+.ajanta-caves{
+  background-image: url(./assets/ajanta-caves.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.ellora-caves{
+  background-image: url(./assets/ellora-caves.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:20px;
+}
+
+.agra-fort{
+  background-image: url(./assets/agra-fort.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:20px;
+}
+
+.taj-mahal{
+  background-image: url(./assets/taj-mahal.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:20px;
+}
+
+.qutub-minar{
+  background-image: url(./assets/qutub-minar.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:20px;
+}
+
+.hampi{
+  background-image: url(./assets/hampi.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:20px;
+}
+
+.khajuraho{
+  background-image: url(./assets/khajuraho.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:20px;
+}
+
+.fatehpur-sikri{
+  background-image: url(./assets/fatehpur-sikri.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:20px;
+}
+
+.ajanta-caves:hover, .ellora-caves:hover, .khajuraho:hover, .sun-temple:hover, .taj-mahal:hover, .qutub-minar:hover, .hampi:hover, .agra-fort:hover, .fatehpur-sikri:hover {
+  transform: scale(1.10);
+  transition: transform 0.3s ease;
+}
+
+
+.hills-station{
+  width: 100%;
+  min-height: 65vh;
+}
+
+.hills-station h1{
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: oblique;
+  font-family: sans-serif;
+}
+
+.hills-station-container{
+  display: flex;
+  gap: 55px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 30px 70px;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.hills-station-container::-webkit-scrollbar{
+  display: none;
+}
+
+.shimla{
+  background-image: url(./assets/shimla.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.manali{
+  background-image: url(./assets/manali.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.darjeeling{
+  background-image: url(./assets/darjeeling.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.munnar{
+  background-image: url(./assets/munnar.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.ooty{
+  background-image: url(./assets/ooty.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.coorg{
+  background-image: url(./assets/coorg.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.mussoorie{
+  background-image: url(./assets/mussoorie.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.kodaikanal{
+  background-image: url(./assets/kodaikanal.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.shimla:hover, .manali:hover, .darjeeling:hover, .munnar:hover, .ooty:hover, .coorg:hover, .mussoorie:hover, .kodaikanal:hover {
+  transform: scale(1.10);
+  transition: transform 0.3s ease;
+}
+
+.temples{
+  width: 100%;
+  min-height: 65vh;
+}
+
+.temples h1{
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: oblique;
+  font-family: sans-serif;
+}
+
+.temples-container{
+  display: flex;
+  gap: 55px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 30px 70px;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.temples-container::-webkit-scrollbar{
+  display: none;
+}
+
+.somnath-temple{
+  background-image: url(./assets/somnath-temple.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.golden-temple{
+  background-image: url(./assets/golden-temple.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.meenakshi-temple{
+  background-image: url(./assets/meenakshi-temple.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.konark-sun-temple{
+  background-image: url(./assets/konark-sun-temple.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.brihadeeswarar-temple{
+  background-image: url(./assets/brihadeeswarar-temple.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.kedarnath-temple{
+  background-image: url(./assets/kedarnath-temple.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.vaishno-devi{
+  background-image: url(./assets/vaishno-devi.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.siddhivinayak-temple{
+  background-image: url(./assets/siddhivinayak-temple.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.somnath-temple:hover, .golden-temple:hover, .meenakshi-temple:hover, .konark-sun-temple:hover, .brihadeeswarar-temple:hover, .kedarnath-temple:hover, .vaishno-devi:hover, .siddhivinayak-temple:hover {
+  transform: scale(1.10);
+  transition: transform 0.3s ease;
+}
+
+.beaches{
+  width: 100%;
+  min-height: 65vh;
+}
+
+.beaches h1{
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: oblique;
+  font-family: sans-serif;
+}
+
+.beaches-container{
+  display: flex;
+  gap: 55px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 30px 70px;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.beaches-container::-webkit-scrollbar{
+  display: none;
+}
+
+.goa-beach{
+  background-image: url(./assets/goa-beach.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.andaman-beach{
+  background-image: url(./assets/andaman-beach.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.kerala-beach{
+  background-image: url(./assets/kerala-beach.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.pondicherry-beach{
+  background-image: url(./assets/pondicherry-beach.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.mahabalipuram-beach{
+  background-image: url(./assets/mahabalipuram-beach.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.gokarna-beach{
+  background-image: url(./assets/gokarna-beach.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.varkala-beach{
+  background-image: url(./assets/varkala-beach.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.rajasthan-beach{
+  background-image: url(./assets/rajasthan-beach.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.goa-beach:hover, .andaman-beach:hover, .kerala-beach:hover, .pondicherry-beach:hover, .mahabalipuram-beach:hover, .gokarna-beach:hover, .varkala-beach:hover, .rajasthan-beach:hover {
+  transform: scale(1.10);
+  transition: transform 0.3s ease;
+}
+
+.waterfalls{
+  width: 100%;
+  min-height: 65vh;
+}
+.waterfalls h1{
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: oblique;
+  font-family: sans-serif;
+}
+
+.waterfalls-container{
+  display: flex;
+  gap: 55px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 30px 70px;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.waterfalls-container::-webkit-scrollbar{
+  display: none;
+}
+
+.jog-falls{
+  background-image: url(./assets/jog-falls.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.athirappilly-falls{
+  background-image: url(./assets/athirappilly-falls.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.dudhsagar-falls{
+  background-image: url(./assets/dudhsagar-falls.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.kunchikal-falls{
+  background-image: url(./assets/kunchikal-falls.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.shivanasamudra-falls{
+  background-image: url(./assets/shivanasamudra-falls.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.naneghat-falls{
+  background-image: url(./assets/naneghat-falls.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.bhagsu-falls{
+  background-image: url(./assets/bhagsu-falls.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.kempty-falls{
+  background-image: url(./assets/kempty-falls.png);
+  background-size: cover;
+  min-width:300px;
+  height:250px;
+  border-radius:20px;
+  flex-shrink:0;
+  padding:25px;
+}
+
+.jog-falls:hover, .athirappilly-falls:hover, .dudhsagar-falls:hover, .kunchikal-falls:hover, .shivasamudram-falls:hover, .naneghat-falls:hover, .bhagsu-falls:hover, .kempty-falls:hover {
+  transform: scale(1.10);
+  transition: transform 0.3s ease;
+}
+
+.heritage-sites-container > div,.hills-station-container > div,.temples-container > div,.beaches-container > div,.waterfalls-container > div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.heritage-sites-container p,.hills-station-container p,.temples-container p,.beaches-container p,.waterfalls-container p {
+  margin: 0 0 15px 0;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.heritage-sites h1,.hills-station h1,.temples h1,.beaches h1,.waterfalls h1 {
+  margin-left: 40%;
+  margin-top: 10px;
+}
+
+/*popular destinations section*/
+
+.hidden-destination{
+  width: 100%;
+  min-height: 790vh;
+  background-image: linear-gradient(
+  rgba(10, 25, 47, 0.65),
+  rgba(10, 25, 47, 0.65)
+);
+}
+
+.hidden-destination-head{
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  font-style: oblique;
+  font-family: sans-serif;
+  margin-left: 37%;
+  margin-top: 10px;
+}
+
+.hidden-destination1-img{
+  background-image: url(./assets/hidden-destination1.png);
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+  border-radius: 20px;
+  width: 70%;
+  min-height: 80vh;
+  background-color: aqua;
+}
+
+.hidden-destination1-p{
+  margin-top: 10px;
+  width: 70%;
+  min-height: 50vh;
+}
+
+.hidden-destination1-p p{
+  color: white;
+  font-size: 20px;
+}
+
+.hidden-destination1-p h2{
+  font-size: 30px;
+  margin: 10px;
+}
+
+.hidden-destination2-img{
+  background-image: url(./assets/hidden-destination2.png);
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 60px;
+  background-color: blueviolet;
+  margin-left: 450px;
+  width: 70%;
+  min-height: 80vh;
+}
+
+.hidden-destination2-p{
+   margin-top: 10px;
+  margin-left: 450px;
+  width: 70%;
+  min-height: 50vh;
+}
+
+.hidden-destination2-p p{
+  color: white;
+  font-size: 20px;
+}
+
+.hidden-destination2-p h2{
+  font-size: 30px;
+  margin: 10px;
+}
+
+.hidden-destination3-img{
+  background-image: url(./assets/hidden-destination3.png);
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 60px;
+  width: 70%;
+  min-height: 80vh;
+  background-color: aqua;
+}
+
+.hidden-destination3-p{
+  margin-top: 10px;
+  width: 70%;
+  min-height: 50vh;
+}
+
+.hidden-destination3-p p{
+  color: white;
+  font-size: 20px;
+}
+
+.hidden-destination3-p h2{
+  font-size: 30px;
+  margin: 10px;
+}
+
+.hidden-destination4-img{
+  background-image: url(./assets/hidden-destination4.png);
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 60px;
+  background-color: blueviolet;
+  margin-left: 450px;
+  width: 70%;
+  min-height: 80vh;
+}
+
+.hidden-destination4-p{
+   margin-top: 10px;
+  margin-left: 450px;
+  width: 70%;
+  min-height: 50vh;
+}
+
+.hidden-destination4-p p{
+  color: white;
+  font-size: 20px;
+}
+
+.hidden-destination4-p h2{
+  font-size: 30px;
+  margin: 10px;
+}
+
+.hidden-destination5-img{
+  background-image: url(./assets/hidden-destination5.png);
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 60px;
+  width: 70%;
+  min-height: 80vh;
+  background-color: aqua;
+}
+
+.hidden-destination5-p{
+  margin-top: 10px;
+  width: 70%;
+  min-height: 50vh;
+}
+
+.hidden-destination5-p p{
+  color: white;
+  font-size: 20px;
+}
+
+.hidden-destination5-p h2{
+  font-size: 30px;
+  margin: 10px;
+}
+
+.destination-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  color: #FFD700;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  background: #07182d;
+  color: white;
+  margin-top: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 60px 80px;
+}
+
+.footer-about {
+  width: 30%;
+}
+
+.footer-about h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.footer-about h2 span {
+  color: orange;
+}
+
+.footer-about p {
+  color: #d6d6d6;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: orange;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: #d6d6d6;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: orange;
+}
+
+.footer-contact p {
+  color: #d6d6d6;
+  margin: 0;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #aaa;
+  font-size: 14px;
+}

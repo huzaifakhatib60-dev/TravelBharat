@@ -1,0 +1,113 @@
+.contact {
+  min-height: 100vh;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  background: #f5f5f5;
+}
+
+.contact-div {
+  width: 45%;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact-div h1 {
+  margin-bottom: 30px;
+  color: #092209;
+}
+
+.contact-div p {
+  margin: 20px 0;
+  font-size: 17px;
+}
+
+.contact-div a {
+  margin-left: 5px;
+  color: #0b8f3b;
+  text-decoration: none;
+}
+
+.contact-div a:hover {
+  text-decoration: underline;
+}
+
+.message-div {
+  width: 45%;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.message-div h1 {
+  margin-bottom: 25px;
+  color: #092209;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-container p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.message-container br {
+  display: none;
+}
+
+.message-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.message-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.message-container input:focus,
+.message-container textarea:focus {
+  outline: none;
+  border-color: #0b8f3b;
+}
+
+.message-container button {
+  width: 150px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #0b8f3b;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.message-container button:hover {
+  background: #086d2d;
+}
+
+.message-container > p:last-child {
+  margin-top: 15px;
+  color: #0b8f3b;
+  font-weight: 500;
+}
