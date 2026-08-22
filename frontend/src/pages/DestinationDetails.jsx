@@ -18,9 +18,7 @@ function DestinationDetails() {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/states/name/${encodeURIComponent(
-            stateName
-          )}`
+          `/api/states/name/${encodeURIComponent(stateName)}`
         );
 
         if (!response.ok) {

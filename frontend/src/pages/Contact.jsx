@@ -22,7 +22,7 @@ function Contact() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,7 +66,9 @@ function Contact() {
 
         <p>
           Contact No:
-          <a href="tel:+918010885264">+91 80108 85264</a>
+          <a href="tel:+918010885264">
+            +91 80108 85264
+          </a>
         </p>
       </div>
 
@@ -75,7 +77,7 @@ function Contact() {
 
         <form className="message-container" onSubmit={handleSubmit}>
           <p>Name</p>
-          <br></br>
+          <br />
 
           <input
             type="text"
@@ -87,7 +89,7 @@ function Contact() {
           />
 
           <p>Email</p>
-          <br></br>
+          <br />
 
           <input
             type="email"
@@ -99,7 +101,7 @@ function Contact() {
           />
 
           <p>Subject</p>
-          <br></br>
+          <br />
 
           <input
             type="text"
@@ -110,7 +112,7 @@ function Contact() {
             required
           />
 
-          <br></br>
+          <br />
 
           <textarea
             name="message"
@@ -122,7 +124,7 @@ function Contact() {
             required
           ></textarea>
 
-          <br></br>
+          <br />
 
           <button type="submit">Send Message</button>
 

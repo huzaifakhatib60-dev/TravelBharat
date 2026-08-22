@@ -44,7 +44,7 @@ function Login() {
       let requestData;
 
       if (isRegister) {
-        url = "http://localhost:5000/api/auth/register";
+        url = "/api/auth/register";
 
         requestData = {
           name: formData.name.trim(),
@@ -52,7 +52,7 @@ function Login() {
           password: password,
         };
       } else {
-        url = "http://localhost:5000/api/auth/login";
+        url = "/api/auth/login";
 
         requestData = {
           email: email,
@@ -77,9 +77,7 @@ function Login() {
       console.log("Backend response:", data);
 
       if (!response.ok) {
-        throw new Error(
-          data.message || "Something went wrong"
-        );
+        throw new Error(data.message || "Something went wrong");
       }
 
       if (data.token) {

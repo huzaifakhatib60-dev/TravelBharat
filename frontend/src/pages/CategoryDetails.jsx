@@ -16,9 +16,7 @@ function CategoryDetails() {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/destinations/category/${encodeURIComponent(
-            categoryName
-          )}`
+          `/api/destinations/category/${encodeURIComponent(categoryName)}`
         );
 
         if (!response.ok) {
@@ -74,6 +72,7 @@ function CategoryDetails() {
       {destinations.length === 0 ? (
         <div className="no-destinations">
           <h2>No destinations found</h2>
+
           <p>
             There are currently no destinations in {categoryName}.
           </p>
