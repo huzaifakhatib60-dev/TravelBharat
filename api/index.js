@@ -13,6 +13,9 @@ module.exports = async (req, res) => {
 
     return app(req, res);
   } catch (error) {
+    // Allow a later serverless invocation to retry a failed initial connection.
+    dbPromise = undefined;
+
     console.error("❌ MongoDB connection failed:");
     console.error(error);
 

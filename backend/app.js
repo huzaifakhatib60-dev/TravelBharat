@@ -29,8 +29,24 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
-app.get("/", (req, res) => {
-  res.send("TravelBharat Backend Running...");
+app.get("/api/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
+app.use((req, res) => {
+  res.status(404).json({ message: "Route not found" });
+});
+
+app.use((error, req, res, next) => {
+  console.error(error);
+
+  if (error instanceof SyntaxError && "body" in error) {
+    return res.status(400).json({ message: "Invalid JSON request body" });
+  }
+
+  return res.status(error.status || 500).json({
+    message: error.message || "Internal server error",
+  });
 });
 
 module.exports = app;
