@@ -4,6 +4,7 @@ import "./CategoryDetails.css";
 
 function CategoryDetails() {
   const { categoryName } = useParams();
+  const showDestinationImages = categoryName?.trim().toLowerCase() !== "forts";
 
   const [destinations, setDestinations] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -84,7 +85,7 @@ function CategoryDetails() {
               className="destination-card"
               key={destination._id}
             >
-              {destination.mainImage && (
+              {showDestinationImages && destination.mainImage && (
                 <img
                   src={`/images/${destination.mainImage}`}
                   alt={destination.name}
