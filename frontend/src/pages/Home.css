@@ -1203,3 +1203,72 @@ form{
 @media (max-width: 400px) {
   .nav-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Destination tiles are links, so keep their card appearance and show keyboard focus. */
+.famous-states a,
+.categories-preview .slider-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.heritage-sites-container > a,
+.hills-station-container > a,
+.temples-container > a,
+.beaches-container > a,
+.waterfalls-container > a {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.famous-states a:focus-visible,
+.categories-preview .slider-container a:focus-visible {
+  outline: 3px solid #ffb000;
+  outline-offset: 4px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px 0;
+  border-radius: 3px;
+  background: currentColor;
+}
+
+.place-details-page {
+  min-height: 100vh;
+  padding: 32px clamp(16px, 5vw, 64px);
+  background: #f5f7fa;
+  color: #172a3a;
+}
+
+.place-details-page .back-link { display: inline-block; margin-bottom: 24px; color: #075b71; }
+.place-details-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto; padding: 24px; border-radius: 18px; background: white; box-shadow: 0 10px 30px rgba(0, 0, 0, .1); }
+.place-details-card img { width: 100%; max-height: 520px; object-fit: cover; border-radius: 12px; }
+.place-details-card h1 { margin-top: 0; }
+
+@media (max-width: 768px) {
+  .navbar { position: relative; flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; }
+  .logo { justify-content: flex-start; }
+  .menu-toggle { display: block; flex: 0 0 auto; }
+  .nav-links { display: none; position: absolute; z-index: 20; top: 100%; left: 0; right: 0; grid-template-columns: 1fr; gap: 4px; width: auto; margin: 0; padding: 10px 16px 16px; background: #10283b; box-shadow: 0 8px 14px rgba(0, 0, 0, .25); text-align: left; }
+  .nav-links.is-open { display: grid; }
+  .nav-links li { padding: 10px 12px; }
+  .nav-links li:hover { border-width: 0 0 0 3px; }
+  .nav-links a { display: block; color: white; text-decoration: none; }
+  .place-details-card { grid-template-columns: 1fr; }
+  .place-details-card img { max-height: 320px; }
+  .heritage-sites-container > a, .hills-station-container > a, .temples-container > a, .beaches-container > a, .waterfalls-container > a { min-width: calc(100vw - 96px); height: 210px; box-sizing: border-box; scroll-snap-align: center; }
+}

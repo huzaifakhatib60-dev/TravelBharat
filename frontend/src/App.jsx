@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import DestinationDetails from "./pages/DestinationDetails";
+import PlaceDetails from "./pages/PlaceDetails";
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function App() {
         <Route
           path="/explore/state/:stateName"
           element={<DestinationDetails />}
+        />
+
+        <Route
+          path="/explore/destination/:destinationName"
+          element={<PlaceDetails />}
         />
 
         <Route

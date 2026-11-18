@@ -1,23 +1,40 @@
 import logo from "../assets/logo.png";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <>
       <header className="navbar">
         <div className="logo">
           <img src={logo} alt="Travel Bharat Logo" className="logo-img" /> 
           <h1 className="logo-text"> Travel<span>Bharat</span></h1>
-          </div>
+        </div>
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
        
-        <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/states">States</Link></li>
-          <li><Link to="/categories">Categories</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/login" className="login-btn">Login</Link></li>
+        <ul id="primary-navigation" className={`nav-links${menuOpen ? " is-open" : ""}`}>
+          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/states" onClick={closeMenu}>States</Link></li>
+          <li><Link to="/categories" onClick={closeMenu}>Categories</Link></li>
+          <li><Link to="/about" onClick={closeMenu}>About</Link></li>
+          <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+          <li><Link to="/login" className="login-btn" onClick={closeMenu}>Login</Link></li>
         </ul>
       </header>
       <section className="hero-section">
@@ -57,11 +74,11 @@ function Home() {
   </button>
 
   <div className="famous-states">
-    <div className="maharashtra"><p>Maharashtra</p></div>
-    <div className="goa"><p>Goa</p></div>
-    <div className="rajasthan"><p>Rajasthan</p></div>
-    <div className="uttar-pradesh"><p>Uttar Pradesh</p></div>
-    <div className="kerala"><p>Kerala</p></div>
+    <Link to="/explore/state/Maharashtra" className="maharashtra" aria-label="Explore Maharashtra"><p>Maharashtra</p></Link>
+    <Link to="/explore/state/Goa" className="goa" aria-label="Explore Goa"><p>Goa</p></Link>
+    <Link to="/explore/state/Rajasthan" className="rajasthan" aria-label="Explore Rajasthan"><p>Rajasthan</p></Link>
+    <Link to="/explore/state/Uttar%20Pradesh" className="uttar-pradesh" aria-label="Explore Uttar Pradesh"><p>Uttar Pradesh</p></Link>
+    <Link to="/explore/state/Kerala" className="kerala" aria-label="Explore Kerala"><p>Kerala</p></Link>
   </div>
 
   <button className="slide-btn right"
@@ -94,14 +111,14 @@ function Home() {
             </button>
           
           <div className="heritage-sites-container">
-            <div className="ajanta-caves"><p>Ajanta Caves</p></div>
-            <div className="ellora-caves"><p>Ellora Caves</p></div>
-            <div className="agra-fort"><p>Agra Fort</p></div>
-            <div className="taj-mahal"><p>Taj Mahal</p></div>
-            <div className="qutub-minar"><p>Qutub Minar</p></div>
-            <div className="hampi"><p>Hampi</p></div>
-            <div className="khajuraho"><p>Khajuraho</p></div>
-            <div className="fatehpur-sikri"><p>Fatehpur Sikri</p></div>
+            <Link to={`/explore/destination/${encodeURIComponent("Ajanta Caves")}`} className="ajanta-caves" aria-label="Explore Ajanta Caves"><p>Ajanta Caves</p></Link>
+            <Link to={`/explore/destination/${encodeURIComponent("Ellora Caves")}`} className="ellora-caves" aria-label="Explore Ellora Caves"><p>Ellora Caves</p></Link>
+            <Link to={`/explore/destination/${encodeURIComponent("Agra Fort")}`} className="agra-fort" aria-label="Explore Agra Fort"><p>Agra Fort</p></Link>
+            <Link to={`/explore/destination/${encodeURIComponent("Taj Mahal")}`} className="taj-mahal" aria-label="Explore Taj Mahal"><p>Taj Mahal</p></Link>
+            <Link to={`/explore/destination/${encodeURIComponent("Qutub Minar")}`} className="qutub-minar" aria-label="Explore Qutub Minar"><p>Qutub Minar</p></Link>
+            <Link to={`/explore/destination/${encodeURIComponent("Hampi")}`} className="hampi" aria-label="Explore Hampi"><p>Hampi</p></Link>
+            <Link to={`/explore/destination/${encodeURIComponent("Khajuraho")}`} className="khajuraho" aria-label="Explore Khajuraho"><p>Khajuraho</p></Link>
+            <Link to={`/explore/destination/${encodeURIComponent("Fatehpur Sikri")}`} className="fatehpur-sikri" aria-label="Explore Fatehpur Sikri"><p>Fatehpur Sikri</p></Link>
           </div>
           
           <button className="slide-btn right"
@@ -132,14 +149,14 @@ function Home() {
              &#10094;
             </button>
             <div className="hills-station-container">
-              <div className="shimla"><p>Shimla</p></div>
-              <div className="manali"><p>Manali</p></div>
-              <div className="darjeeling"><p>Darjeeling</p></div>
-              <div className="munnar"><p>Munnar</p></div>
-              <div className="ooty"><p>Ooty</p></div>
-              <div className="coorg"><p>Coorg</p></div>
-              <div className="mussoorie"><p>Mussoorie</p></div>
-              <div className="kodaikanal"><p>Kodaikanal</p></div>
+              <Link to={`/explore/destination/${encodeURIComponent("Shimla")}`} className="shimla" aria-label="Explore Shimla"><p>Shimla</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Manali")}`} className="manali" aria-label="Explore Manali"><p>Manali</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Darjeeling")}`} className="darjeeling" aria-label="Explore Darjeeling"><p>Darjeeling</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Munnar")}`} className="munnar" aria-label="Explore Munnar"><p>Munnar</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Ooty")}`} className="ooty" aria-label="Explore Ooty"><p>Ooty</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Coorg")}`} className="coorg" aria-label="Explore Coorg"><p>Coorg</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Mussoorie")}`} className="mussoorie" aria-label="Explore Mussoorie"><p>Mussoorie</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Kodaikanal")}`} className="kodaikanal" aria-label="Explore Kodaikanal"><p>Kodaikanal</p></Link>
             </div>
             <button className="slide-btn right"
              onClick={() => {
@@ -168,14 +185,14 @@ function Home() {
              &#10094;
             </button>
             <div className="temples-container">
-              <div className="somnath-temple"><p>Somnath Temple</p></div>
-              <div className="golden-temple"><p>Golden Temple</p></div>
-              <div className="meenakshi-temple"><p>Meenakshi Temple</p></div>
-              <div className="konark-sun-temple"><p>Konark Sun Temple</p></div>
-              <div className="brihadeeswarar-temple"><p>Brihadeeswarar Temple</p></div>
-              <div className="kedarnath-temple"><p>Kedarnath Temple</p></div>
-              <div className="vaishno-devi"><p>Vaishno Devi</p></div>
-              <div className="siddhivinayak-temple"><p>Siddhivinayak Temple</p></div>
+              <Link to={`/explore/destination/${encodeURIComponent("Somnath Temple")}`} className="somnath-temple" aria-label="Explore Somnath Temple"><p>Somnath Temple</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Golden Temple")}`} className="golden-temple" aria-label="Explore Golden Temple"><p>Golden Temple</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Meenakshi Temple")}`} className="meenakshi-temple" aria-label="Explore Meenakshi Temple"><p>Meenakshi Temple</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Konark Sun Temple")}`} className="konark-sun-temple" aria-label="Explore Konark Sun Temple"><p>Konark Sun Temple</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Brihadeeswarar Temple")}`} className="brihadeeswarar-temple" aria-label="Explore Brihadeeswarar Temple"><p>Brihadeeswarar Temple</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Kedarnath Temple")}`} className="kedarnath-temple" aria-label="Explore Kedarnath Temple"><p>Kedarnath Temple</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Vaishno Devi")}`} className="vaishno-devi" aria-label="Explore Vaishno Devi"><p>Vaishno Devi</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Siddhivinayak Temple")}`} className="siddhivinayak-temple" aria-label="Explore Siddhivinayak Temple"><p>Siddhivinayak Temple</p></Link>
             </div>
             <button className="slide-btn right"
              onClick={() => {
@@ -204,14 +221,14 @@ function Home() {
              &#10094;
             </button>
             <div className="beaches-container">
-              <div className="goa-beach"><p>Goa Beach</p></div>
-              <div className="andaman-beach"><p>Andaman Beach</p></div>
-              <div className="kerala-beach"><p>Kerala Beach</p></div>
-              <div className="pondicherry-beach"><p>Pondicherry Beach</p></div>
-              <div className="mahabalipuram-beach"><p>Mahabalipuram Beach</p></div>
-              <div className="gokarna-beach"><p>Gokarna Beach</p></div>
-              <div className="varkala-beach"><p>Varkala Beach</p></div>
-              <div className="rajasthan-beach"><p>Rajasthan Beach</p></div>
+              <Link to={`/explore/destination/${encodeURIComponent("Goa Beach")}`} className="goa-beach" aria-label="Explore Goa Beach"><p>Goa Beach</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Andaman Beach")}`} className="andaman-beach" aria-label="Explore Andaman Beach"><p>Andaman Beach</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Kerala Beach")}`} className="kerala-beach" aria-label="Explore Kerala Beach"><p>Kerala Beach</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Pondicherry Beach")}`} className="pondicherry-beach" aria-label="Explore Pondicherry Beach"><p>Pondicherry Beach</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Mahabalipuram Beach")}`} className="mahabalipuram-beach" aria-label="Explore Mahabalipuram Beach"><p>Mahabalipuram Beach</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Gokarna Beach")}`} className="gokarna-beach" aria-label="Explore Gokarna Beach"><p>Gokarna Beach</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Varkala Beach")}`} className="varkala-beach" aria-label="Explore Varkala Beach"><p>Varkala Beach</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Rajasthan Beach")}`} className="rajasthan-beach" aria-label="Explore Rajasthan Beach"><p>Rajasthan Beach</p></Link>
             </div>
             <button className="slide-btn right"
              onClick={() => {
@@ -240,14 +257,14 @@ function Home() {
              &#10094;
             </button>
             <div className="waterfalls-container">
-              <div className="jog-falls"><p>Jog Falls</p></div>
-              <div className="athirappilly-falls"><p>Athirappilly Falls</p></div>
-              <div className="dudhsagar-falls"><p>Dudhsagar Falls</p></div>
-              <div className="kunchikal-falls"><p>Kunchikal Falls</p></div>
-              <div className="shivanasamudra-falls"><p>Shivanasamudra Falls</p></div>
-              <div className="naneghat-falls"><p>Naneghat Falls</p></div>
-              <div className="bhagsu-falls"><p>Bhagsu Falls</p></div>
-              <div className="kempty-falls"><p>Kempty Falls</p></div>
+              <Link to={`/explore/destination/${encodeURIComponent("Jog Falls")}`} className="jog-falls" aria-label="Explore Jog Falls"><p>Jog Falls</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Athirappilly Falls")}`} className="athirappilly-falls" aria-label="Explore Athirappilly Falls"><p>Athirappilly Falls</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Dudhsagar Falls")}`} className="dudhsagar-falls" aria-label="Explore Dudhsagar Falls"><p>Dudhsagar Falls</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Kunchikal Falls")}`} className="kunchikal-falls" aria-label="Explore Kunchikal Falls"><p>Kunchikal Falls</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Shivanasamudra Falls")}`} className="shivanasamudra-falls" aria-label="Explore Shivanasamudra Falls"><p>Shivanasamudra Falls</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Naneghat Falls")}`} className="naneghat-falls" aria-label="Explore Naneghat Falls"><p>Naneghat Falls</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Bhagsu Falls")}`} className="bhagsu-falls" aria-label="Explore Bhagsu Falls"><p>Bhagsu Falls</p></Link>
+              <Link to={`/explore/destination/${encodeURIComponent("Kempty Falls")}`} className="kempty-falls" aria-label="Explore Kempty Falls"><p>Kempty Falls</p></Link>
             </div>
             <button className="slide-btn right"
              onClick={() => {
@@ -408,3 +425,4 @@ function Home() {
 }
 
 export default Home;
+
